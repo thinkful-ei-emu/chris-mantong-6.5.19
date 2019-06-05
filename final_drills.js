@@ -65,34 +65,56 @@
 // }
 // myBoss(arr);
 
-//Cracking the code
+// //Cracking the code
 
-const decodearr={
-  a:2,
-  b:3,
-  c:4,
-  d:5,
-  else: ' '
+// const decodearr={
+//   a:2,
+//   b:3,
+//   c:4,
+//   d:5,
+// };
 
+// function decodeWord(word){
+//   let result = decodearr[word[0]];
+//   if(result === undefined) {
+//     return ' ';
+//   }
+//   return word[result-1];
+// }
 
-};
-
-function decodeWords(word){
-  {
-    return word
-      .split(' ')
-      .map(function(){
-        for (let i=0; i<word.length; i++){
-          if (word[0]===decodearr.key)
-            return word[decodearr.value-1];
-        }
-      })
-      .join('');
+// function decodeWords(word){
+//   {
+//     return word
+//       .split(' ')
+//       .map(word => decodeWord(word))
+//       .join('');
    
-  }
+//   }
+
+// }
+
+// let words='craft block argon meter bells brown croon droop'; 
+// let results=decodeWords(words);
+// console.log(results);
+
+//Factory Functions with LOTR
+function createCharacter() {
+  return {
+    Name,
+    Nickname,
+    Race,
+    Origin,
+    Attack,
+    Defense,
+    describe: function() {
+      return `${this.name} is a ${this.race} from ${this.origin}.`;
+    },
+    evaluateFight: function(character) {
+      if((this.attack-this.defense)<0) {
+        return x=0;
+      }
+      return `Your opponent takes ${this.attack-this.defense} damage and you receive ${this.attack-this.defense} damage`;
+    }
+  };
 
 }
-
-let words='craft block argon meter bells brown croon droop'; 
-let results=decodeWords(words);
-console.log(results);
