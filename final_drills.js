@@ -31,22 +31,39 @@
 
 // console.log(hobbitMeal.meals[3])
 
-//Arrays in objects part II
+// //Arrays in objects part II
 
-const arr=[
-  {name:'mantong', 
-    jobTitle:'engineer'
-  },
-  {
-    name:'chris',
-    jobTitle: 'softwareEngineer'
-  },
-  {
-    name:'joey',
-    jobTitle: 'baby'
-  }
-];
-let results=[];
-for (let i=0; i< arr.length; i++){
-  results.push(arr[i].name,arr[i].jobTitle);}
-console.log(results);
+// const arr=[
+//   {name:'Mantong', 
+//     jobTitle:'Engineer',
+//     boss: 'John'
+//   },
+//   {
+//     name:'chris',
+//     jobTitle: 'Software Engineer',
+//     boss: 'Steve'
+//   },
+//   {
+//     name:'Joey',
+//     jobTitle: 'Baby',
+//   }
+// ];
+// let results=[];
+// for (let i=0; i< arr.length; i++){
+//   results.push(arr[i].name,arr[i].jobTitle);}
+// console.log(results);
+
+// function myBoss(obj) {
+//   for(let i=0; i<obj.length;i++){
+//     if(obj[i].boss) {
+//       console.log(`${obj[i].jobTitle} ${obj[i].name} reports to ${obj[i].boss}.`);
+//     }
+//     else {
+//       console.log(`${obj[i].jobTitle} ${obj[i].name} doesn't report to anybody.`);
+//     }
+//   }
+// }
+// myBoss(arr);
+
+//Cracking the code
+
