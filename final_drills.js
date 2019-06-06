@@ -97,24 +97,82 @@
 // let results=decodeWords(words);
 // console.log(results);
 
-//Factory Functions with LOTR
-function createCharacter() {
-  return {
-    Name,
-    Nickname,
-    Race,
-    Origin,
-    Attack,
-    Defense,
-    describe: function() {
-      return `${this.name} is a ${this.race} from ${this.origin}.`;
-    },
-    evaluateFight: function(character) {
-      if((this.attack-this.defense)<0) {
-        return x=0;
-      }
-      return `Your opponent takes ${this.attack-this.defense} damage and you receive ${this.attack-this.defense} damage`;
-    }
-  };
+// //Factory Functions with LOTR
+// function createCharacter(Name, Nickname, Race, Origin, Weapon, Attack, Defense) {
+//   return {
+//     Name,
+//     Nickname,
+//     Race,
+//     Origin,
+//     Weapon,
+//     Attack,
+//     Defense,
+//     describe: function() {
+//       return `${this.Name} is a ${this.Race} from ${this.Origin}.`;
+//     },
+//     evaluateFight: function(character) {
+//       const x = character.Defense > this.Attack ? 0 : this.Attack - character.Defense;
+//       const y = this.Defense > character.Attack ? 0 : character.Attack - this.Defense;
+      
+//       return `Your opponent takes ${x} damage and you receive ${y} damage`;
+//     }
+//   };
+// }
+// const Gandalf = createCharacter('Gandalf the White', 'gandalf', 'Wizard', 'Middle Earth', 'wizard staff', 10, 6);
+// const Bilbo = createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 'the Ring', 2, 1);
+// const Frodo = createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 'String and Barrow Blade', 3, 2);
+// const Aragorn = createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedain', 'Anduril', 6, 8);
+// const Legolas = createCharacter('Legolas', 'legolas', 'Elf', 'Woodland Realm', 'Bow and Arrow', 8, 5);
 
+// const characters = [Gandalf, Bilbo, Frodo, Aragorn, Legolas];
+
+
+// //console.log(character);
+
+// const aragorn = characters.find(character => character.Nickname === 'aragorn');
+
+// const hobbitList = characters.filter(character => character.Race === 'Hobbit');
+
+// const strongAtt = characters.filter(character => character.Attack > 5);
+
+// console.log(aragorn, hobbitList, strongAtt);
+
+//A Database Search
+const HEROES = [
+  { id: 1, name: 'Captain America', squad: 'Avengers' },
+  { id: 2, name: 'Iron Man', squad: 'Avengers' },
+  { id: 3, name: 'Spiderman', squad: 'Avengers' },
+  { id: 4, name: 'Superman', squad: 'Justice League' },
+  { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+  { id: 6, name: 'Aquaman', squad: 'Justice League' },
+  { id: 7, name: 'Hulk', squad: 'Avengers' },
+];
+
+function findOne(arr, query) {
+  const result = arr.find(word => {
+    if (!word[query]) {
+      return null;
+    }  
+    return word;
+  });
+  return result;
 }
+
+console.log(findOne(HEROES, { id: 1 }));
+
+//A Database Method
+
+const Database = {
+  store: {
+    heroes: [
+      { id: 1, name: 'Captain America', squad: 'Avengers' },
+      { id: 2, name: 'Iron Man', squad: 'Avengers' },
+      { id: 3, name: 'Spiderman', squad: 'Avengers' },
+      { id: 4, name: 'Superman', squad: 'Justice League' },
+      { id: 5, name: 'Wonder Woman', squad: 'Justice League' },
+      { id: 6, name: 'Aquaman', squad: 'Justice League' },
+      { id: 7, name: 'Hulk', squad: 'Avengers' },
+    ]
+  },
+  findOne: 2
+};
